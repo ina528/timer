@@ -6,6 +6,7 @@ public class CountdownTimer {
         Scanner scanner = new Scanner(System.in);
 
         // Ask user for input
+	System.out.print("Start");	
         System.out.print("Enter the countdown time in seconds: ");
         int seconds = scanner.nextInt();
 
