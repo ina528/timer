@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class CountdownTimer {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Ask user for input
+        System.out.print("Enter the countdown time in seconds: ");
+        int seconds = scanner.nextInt();
+
+        // Countdown loop
+        for (int i = seconds; i > 0; i--) {
+            System.out.println("Time left: " + i + " second(s)");
+            try {
+                Thread.sleep(1000); // Sleep for 1 second
+            } catch (InterruptedException e) {
+                System.out.println("Timer interrupted");
+                return;
+            }
+        }
+
+        // Timer finished
+        System.out.println("Time's up!");
+
+        scanner.close();
+    }
+}
